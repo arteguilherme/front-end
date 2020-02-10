@@ -1,0 +1,21 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "live-server public",
+    "scss": "sass --no-source-map --watch src/scss:public/assets/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.13.1"
+  },
+  "devDependencies": {
+    "sass": "^1.25.0"
+  }
+}
