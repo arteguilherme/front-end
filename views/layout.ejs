@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/custom.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link href="./assets/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+  
+  <title>Emarket</title>
+</head>
+<body>
+<main>
+  <%- body %>
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="./assets/js/swiper.min.js"></script>
+<script src="./assets/js/sweetalert2.all.min.js"></script>
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/jquery.mask.min.js"></script>
+<script src="assets/js/mainOwlCarousel.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  });
+</script>
+<script>
+  document.querySelector('.info_cpf').addEventListener(
+    'click',
+    function () {
+
+      Swal.fire({
+        title: 'Informe o CEP onde irá receber o produto.',
+        input: 'text',
+        inputAttributes: {
+          autocapitalize: 'off',
+          id: 'cep',
+          name: 'cep'
+        },
+        onOpen: function () {
+          $('#cep').mask('00000-000');
+        },
+        showCancelButton: true,
+        confirmButtonText: 'Buscar',
+        showLoaderOnConfirm: true,
+        preConfirm: (cep) => {
+          return fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error(response.statusText)
+              }
+              return response.json()
+            })
+            .catch(error => {
+              Swal.showValidationMessage(
+                `CEP não existe!`
+              )
+            })
+        },
+        allowOutsideClick: () => !Swal.isLoading()
+      }).then((result) => {
+        if (result.value) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Endereço encontrado!',
+            text: `${result.value.cep}, ${result.value.bairro}, ${result.value.logradouro}, ${result.value.localidade}, ${result.value.uf}`,
+            showConfirmButton: false,
+            timer: 1500
+          })
+
+          function setLocalStorage() {
+
+            cepStore = {
+              cep: result.value.cep,
+              bairro: result.value.bairro,
+              logradouro: result.value.logradouro,
+              localidade: result.value.localidade,
+              uf: result.value.uf
+            };
+
+            localStorage.setItem('cepStore', JSON.stringify(cepStore));
+
+          }
+          setLocalStorage();
+
+        }
+      })
+    });
+</script>
+
+</body>
+</html>

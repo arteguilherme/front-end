@@ -11,7 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
     "autoprefixer": "^9.7.4",
+    "bootstrap": "^4.4.1",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "faker": "^4.1.0",
     "live-server": "^1.2.1",
     "node-sass": "^4.13.1"
   },

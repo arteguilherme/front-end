@@ -1,0 +1,168 @@
+<%- contentFor('body') %>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <div class="container">
+      <a class="navbar-brand logo font-weight-bolder" href="#"><i class="fas fa-microchip mr-2"></i>emarket</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between">
+        <div class="input-group col-sm-8">
+          <input type="text" class="form-control form-control-lg" placeholder="Buscar Produtos, Marcas e Muito mais..."
+            aria-label="Buscar produtos, marcas e muito mais..." aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="input-group-text btn btn-danger" id="basic-addon2"><i
+                class="fas fa-search px-2"></i></button>
+          </div>
+        </div>
+        <div class="nav-cart col-sm-4 d-flex justify-content-end">
+          <a href="#" class="lista-desejos"><i class="far fa-heart fa-sm mr-1 align-middle"></i>Lista de Desejos</a>
+          <a href="#" class="ml-2"><i class="fas fa-sign-in-alt fa-sm mr-1 align-middle"></i>Entrar</a>
+          <a href="#" class="btn-cart ml-2"><i class="fas fa-shopping-cart fa-sm mr-1"></i><span
+              class="badge badge-pill badge-danger position-relative">2</span></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light menu-top">
+  <div class="container">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="text-danger mr-3 info_cpf" href="#"><i
+            class="fas fa-map-marker-alt fa-lg align-middle mr-2"></i>Informe o seu CEP</a>
+      </li>
+    </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item font-weight-bold">
+          <a class="nav-link" href="#"><i class="fas fa-bars mr-2"></i>Categorias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Oferta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lojas Oficiais</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Baixe o App</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="slide">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"
+        style="background-repeat: no-repeat; background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit; z-index: 20;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-6">
+              <div class="mt-4">
+                <h2 class="font-weight-bold slide-title"
+                  style="-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;">
+                  Samsung Galaxy A70</h2>
+                <h3 class="font-weight-light text-xl-left mt-3 mb-5"
+                  style="-webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both; animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                <button type="button" class="btn btn-warning mr-2 text-uppercase btn-sm"
+                  style="-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both; animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;">Comprar
+                  agora</button>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <img class="w-100" src="./assets/images/cellphone.png" alt=""
+                style="-webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+<section class="promo-banner">
+  <div class="container">
+    <div id="promo-banner-list" class="promo-banner-list owl-carousel owl-theme">
+      <div class="item content-banner">
+        <div class="banner-inner">
+          <div class="media">
+            <a href="#" class="d-flex">
+              <div class="image-banner mr-3">
+                <img class="mr-3" src="./assets/images/nikon.png" alt="">
+              </div>
+              <div class="media-body">
+                <h5 class="banner-title font-weight-bold">CAMERA NIKON</h5>
+                <p class="text-uppercase banner-text">Ofertamos garantia técnica de 1 ano.</p>
+                <p class="font-weight-bold">Comprar Agora <i class="fas fa-angle-right"></i> </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="item content-banner">
+        <div class="banner-inner">
+          <div class="media">
+            <a href="#" class="d-flex">
+              <div class="image-banner mr-3">
+                <img class="mr-3" src="./assets/images/camera360.png" alt="">
+              </div>
+              <div class="media-body">
+                <h5 class="banner-title font-weight-bold">Gear 360</h5>
+                <p class="text-uppercase banner-text">com resolução de até 15MP para fotos e 4K.</p>
+                <p class="font-weight-bold">Comprar Agora <i class="fas fa-angle-right"></i> </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="item content-banner">
+        <div class="banner-inner">
+          <div class="media">
+            <a href="#" class="d-flex">
+              <div class="image-banner mr-3">
+                <img class="mr-3" src="./assets/images/gopro8.png" alt="">
+              </div>
+              <div class="media-body">
+                <h5 class="banner-title font-weight-bold">CAMERA NIKON</h5>
+                <p class="text-uppercase banner-text">Ofertamos garantia técnica de 1 ano.</p>
+                <p class="font-weight-bold">Comprar Agora <i class="fas fa-angle-right"></i> </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="commerce-product-tabs py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><img class="w-75" src="./assets/images/tvsmart.png" alt=""></div>
+      <div class="col-md-6">
+        <div class="section-product-carousel">
+          <header class="nav-product">
+            <div class="d-flex justify-content-between">
+              <h2>Televisores</h2>
+              <div class="custom-nav owl-nav"></div>
+            </div>
+          </header>
+          <div id="commerce-product-tabs-list" class="commerce-product-tabs-list owl-carousel owl-theme">
+            <% for (product of products){%>
+              <div class="item">
+                <h2><%= product.name %></h2>
+              </div>
+              <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
